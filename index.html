@@ -80,7 +80,209 @@
 
   <!-- 额外的追加注入项 -->
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><style>.typst-app {
+  margin: 0;
+  --typst-dom-scale: 1;
+  /* --typst-dom-scale: 1.5; */
+  margin: 5px;
+}
+
+.typst-dom-page {
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  --data-text-width: calc(1px * var(--typst-dom-scale));
+  --data-text-height: calc(1px * var(--typst-dom-scale));
+}
+
+.typst-back-canvas {
+  position: absolute;
+  z-index: -1;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  pointer-events: none;
+}
+
+.typst-svg-page {
+  position: absolute;
+  z-index: 0;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+}
+
+.typst-html-semantics {
+  position: absolute;
+  z-index: 2;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  color: transparent;
+  font-family: monospace;
+  white-space: pre;
+  opacity: 0.62;
+}
+
+.typst-html-semantics span {
+  color: transparent;
+  font-family: monospace;
+  transform-origin: left top;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
+
+.typst-content-hint {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.typst-html-semantics a {
+  position: absolute;
+  display: inline-block;
+}
+
+/* set transparent itself */
+.typst-content-group {
+  pointer-events: visible;
+}
+
+.typst-html-semantics span::-moz-selection {
+  color: transparent;
+  background: #7db9de;
+}
+
+.typst-html-semantics span::selection {
+  color: transparent;
+  background: #7db9de;
+}
+
+.typst-html-semantics *::-moz-selection {
+  color: transparent;
+  background: transparent;
+}
+
+.typst-html-semantics *::selection {
+  color: transparent;
+  background: transparent;
+}
+
+.typst-content-fallback {
+  color: transparent;
+  background: transparent;
+}
+
+.pseudo-link,
+.typst-text {
+  pointer-events: none;
+}
+
+.tsel span,
+.tsel {
+  left: 0;
+  position: fixed;
+  text-align: justify;
+  white-space: pre;
+  width: 100%;
+  height: 100%;
+  text-align-last: justify;
+  color: transparent;
+}
+.tsel span::-moz-selection,
+.tsel::-moz-selection {
+  color: transparent;
+  background: #7db9dea0;
+}
+.tsel span::selection,
+.tsel::selection {
+  color: transparent;
+  background: #7db9dea0;
+}
+.pseudo-link {
+  fill: transparent;
+  cursor: pointer;
+  pointer-events: all;
+}
+svg {
+  fill: none;
+}
+
+.outline_glyph path,
+path.outline_glyph {
+  fill: var(--glyph_fill);
+  stroke: var(--glyph_stroke);
+}
+
+.outline_glyph path,
+path.outline_glyph {
+  transition: 0.2s fill stroke;
+}
+.hover .typst-text {
+  --glyph_fill: #66bab7;
+  --glyph_stroke: #66bab7;
+}
+
+.typst-jump-ripple,
+.typst-debug-react-ripple {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+}
+.typst-jump-ripple {
+  border: 1px solid #66bab7;
+}
+.typst-debug-react-ripple {
+  border: 1px solid #cb1b45;
+}
+@keyframes typst-jump-ripple-effect {
+  to {
+    width: 10vw;
+    height: 10vw;
+    opacity: 0.01;
+    margin: -5vw;
+  }
+}
+@keyframes typst-debug-react-ripple-effect {
+  to {
+    width: 3vw;
+    height: 3vw;
+    opacity: 0.01;
+    margin: -1.5vw;
+  }
+}
+</style>
+<script>/// https://segmentfault.com/a/1190000016574288
+(function () {
+  var ie = !!(window.attachEvent && !window.opera);
+  var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && RegExp.$1 < 525;
+  var fn = [];
+  var run = function () {
+    for (var i = 0; i < fn.length; i++) fn[i]();
+  };
+  var d = document;
+  d.ready = function (f) {
+    if (!ie && !wk && d.addEventListener) return d.addEventListener('DOMContentLoaded', f, false);
+    if (fn.push(f) > 1) return;
+    if (ie)
+      (function () {
+        try {
+          d.documentElement.doScroll('left');
+          run();
+        } catch (err) {
+          setTimeout(arguments.callee, 0);
+        }
+      })();
+    else if (wk)
+      var t = setInterval(function () {
+        if (/^(loaded|complete)$/.test(d.readyState)) clearInterval(t), run();
+      }, 0);
+  };
+})();
+</script>
+<script type="module" src="/typst/typst-main.js"></script><script src="/typst/svg-utils.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -215,6 +417,57 @@
             <!-- Breadcrumb for tag & category page -->
 
 
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+                <div class="kratos-entry-thumb">
+                    <a href="/draft/">
+                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/Untitled%20Typst">
+                    </a>
+                </div>
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        
+                    <h2 class="kratos-entry-title"><a href="/draft/" itemprop="mainEntityOfPage"><span itemprop="name headline">Untitled Typst</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            window.typstBindSvgDom &#x3D; function () {};
+window.captureStack &#x3D; function () {
+  return undefined;
+};
+let appContai...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2025-10-22T06:33:27.098Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2025-10-22</a>
+                </time>
+                <a>
+                    
+                </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/draft/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
 
     
     
@@ -425,56 +678,6 @@ Welcome to Picha’s blog.
             
             
                 <div class="kratos-entry-thumb">
-                    <a href="/ZJOI%202025%20%E6%B5%81%E6%B0%B4%E8%B4%A6/">
-                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/ZJOI%202025%20%E6%B5%81%E6%B0%B4%E8%B4%A6">
-                    </a>
-                </div>
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a>
-                    <h2 class="kratos-entry-title"><a href="/ZJOI%202025%20%E6%B5%81%E6%B0%B4%E8%B4%A6/" itemprop="mainEntityOfPage"><span itemprop="name headline">ZJOI 2025 流水账</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            Here&#39;s something encrypted, password is required to continue reading.
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-10-04T16:00:00.000Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-10-05</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a>
-                    
-                </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/ZJOI%202025%20%E6%B5%81%E6%B0%B4%E8%B4%A6/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-                <div class="kratos-entry-thumb">
                     <a href="/yyc%20%E4%BF%A1%E7%AB%9E%E6%94%BB%E7%95%A5%E6%96%87%E5%AD%97%E7%A8%BF/">
                         <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/yyc%20%E4%BF%A1%E7%AB%9E%E6%94%BB%E7%95%A5%E6%96%87%E5%AD%97%E7%A8%BF">
                     </a>
@@ -510,56 +713,6 @@ Welcome to Picha’s blog.
             </span>
             <span class="pull-right">
                 <a class="read-more" href="/yyc%20%E4%BF%A1%E7%AB%9E%E6%94%BB%E7%95%A5%E6%96%87%E5%AD%97%E7%A8%BF/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-                <div class="kratos-entry-thumb">
-                    <a href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/">
-                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE">
-                    </a>
-                </div>
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
-                    <h2 class="kratos-entry-title"><a href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/" itemprop="mainEntityOfPage"><span itemprop="name headline">【题解】ZR2185 【2022省选十连测 Day 4】图</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            Here&#39;s something encrypted, password is required to continue reading.
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-10-04T16:00:00.000Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-10-05</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
-                    
-                </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -675,15 +828,15 @@ Welcome to Picha’s blog.
             
             
                 <div class="kratos-entry-thumb">
-                    <a href="/%E8%AE%B0%20%E5%9C%A8%E5%81%9A%E3%80%8AZR1914%20%E6%9C%80%E5%B0%8F%E5%89%B2%E3%80%8B%E6%97%B6%20%E5%8F%91%E7%8E%B0%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E5%9C%A8%E8%A1%A8%E7%A4%BA%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85/">
-                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/%E8%AE%B0%20%E5%9C%A8%E5%81%9A%E3%80%8AZR1914%20%E6%9C%80%E5%B0%8F%E5%89%B2%E3%80%8B%E6%97%B6%20%E5%8F%91%E7%8E%B0%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E5%9C%A8%E8%A1%A8%E7%A4%BA%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85">
+                    <a href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/">
+                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE">
                     </a>
                 </div>
             
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a>
-                    <h2 class="kratos-entry-title"><a href="/%E8%AE%B0%20%E5%9C%A8%E5%81%9A%E3%80%8AZR1914%20%E6%9C%80%E5%B0%8F%E5%89%B2%E3%80%8B%E6%97%B6%20%E5%8F%91%E7%8E%B0%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E5%9C%A8%E8%A1%A8%E7%A4%BA%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85/" itemprop="mainEntityOfPage"><span itemprop="name headline">记 在做《ZR1914 最小割》时 发现的矩阵乘法在表示操作的一些事情</span></a>
+                        <a class="label-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+                    <h2 class="kratos-entry-title"><a href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/" itemprop="mainEntityOfPage"><span itemprop="name headline">【题解】ZR2185 【2022省选十连测 Day 4】图</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
@@ -702,14 +855,64 @@ Welcome to Picha’s blog.
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/%E9%9A%8F%E8%AE%B0/" rel="tag">随记</a>
+                        <a class="tag-none-link" href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag">题解</a>
                     
                 </a>
                 
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/%E8%AE%B0%20%E5%9C%A8%E5%81%9A%E3%80%8AZR1914%20%E6%9C%80%E5%B0%8F%E5%89%B2%E3%80%8B%E6%97%B6%20%E5%8F%91%E7%8E%B0%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E5%9C%A8%E8%A1%A8%E7%A4%BA%E6%93%8D%E4%BD%9C%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/%E3%80%90%E9%A2%98%E8%A7%A3%E3%80%91ZR2185%20%E3%80%902022%E7%9C%81%E9%80%89%E5%8D%81%E8%BF%9E%E6%B5%8B%20Day%204%E3%80%91%E5%9B%BE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+                <div class="kratos-entry-thumb">
+                    <a href="/%E8%AD%A6%E9%92%9F%E6%95%B2%E7%83%82/">
+                        <img class="kratos-entry-thumb-img" src="/images/孤独摇滚四人卡通1.jpg" alt="/%E8%AD%A6%E9%92%9F%E6%95%B2%E7%83%82">
+                    </a>
+                </div>
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/%E5%90%88%E9%9B%86/">合集</a>
+                    <h2 class="kratos-entry-title"><a href="/%E8%AD%A6%E9%92%9F%E6%95%B2%E7%83%82/" itemprop="mainEntityOfPage"><span itemprop="name headline">警钟敲烂</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            Here&#39;s something encrypted, password is required to continue reading.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2025-10-04T16:00:00.000Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2025-10-05</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/%E5%90%88%E9%9B%86/" rel="tag">合集</a>
+                    
+                </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/%E8%AD%A6%E9%92%9F%E6%95%B2%E7%83%82/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -756,7 +959,7 @@ Welcome to Picha’s blog.
                 文章
             </span>
             <span class="count">
-                11
+                12
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -804,6 +1007,12 @@ Welcome to Picha’s blog.
         
           
           
+            <a class="list-group-item" href="/draft/"><i class="fa fa-book"></i> Untitled Typst</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/%E6%9E%84%E9%80%A0%E9%A2%98%E9%80%89%E5%81%9A/"><i class="fa fa-book"></i> 构造题选做</a>
             
           
@@ -827,11 +1036,7 @@ Welcome to Picha’s blog.
           
         
           
-          
-            <a class="list-group-item" href="/ZJOI%202025%20%E6%B5%81%E6%B0%B4%E8%B4%A6/"><i class="fa fa-book"></i> ZJOI 2025 流水账</a>
             
-          
-        
           
             
           
