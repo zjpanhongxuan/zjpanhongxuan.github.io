@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/assets/橙色宋体チ.svg">
+  
+  
+  <title>一些模板 | ピチャ的后花园</title>
+  <link rel="canonical" href="http://example.com/%E4%B8%80%E4%BA%9B%E6%A8%A1%E6%9D%BF/">
+  <meta name="author" content="ピチャ" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="" />
+  
+  <meta name="description" content="temp.cpp: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455#include&lt;bits&#x2F;stdc++.h&gt;using namespace std;namespace MyNamespace &#123;typedef long">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些模板">
+<meta property="og:url" content="http://example.com/%E4%B8%80%E4%BA%9B%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:site_name" content="ピチャ的后花园">
+<meta property="og:description" content="temp.cpp: 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455#include&lt;bits&#x2F;stdc++.h&gt;using namespace std;namespace MyNamespace &#123;typedef long">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-10-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-31T13:04:17.976Z">
+<meta property="article:author" content="ピチャ">
+<meta name="twitter:card" content="summary">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/assets/孤独摇滚乐队场景1-裁剪.png');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('/assets/孤独摇滚全员壁纸1-裁剪.png');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/assets/波奇酱和喜多壁纸1.png');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('/assets/波奇酱壁纸1.png');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/孤独摇滚四人1-裁剪.png');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/孤独摇滚四人1-裁剪.png');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<!-- hexo injector head_end start --><style>.typst-app {
+  margin: 0;
+  --typst-dom-scale: 1;
+  /* --typst-dom-scale: 1.5; */
+  margin: 5px;
+}
+
+.typst-dom-page {
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  --data-text-width: calc(1px * var(--typst-dom-scale));
+  --data-text-height: calc(1px * var(--typst-dom-scale));
+}
+
+.typst-back-canvas {
+  position: absolute;
+  z-index: -1;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  pointer-events: none;
+}
+
+.typst-svg-page {
+  position: absolute;
+  z-index: 0;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+}
+
+.typst-html-semantics {
+  position: absolute;
+  z-index: 2;
+  width: calc(var(--data-page-width, 100%) * var(--typst-dom-scale));
+  height: calc(var(--data-page-height) * var(--typst-dom-scale));
+  color: transparent;
+  font-family: monospace;
+  white-space: pre;
+  opacity: 0.62;
+}
+
+.typst-html-semantics span {
+  color: transparent;
+  font-family: monospace;
+  transform-origin: left top;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
+
+.typst-content-hint {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.typst-html-semantics a {
+  position: absolute;
+  display: inline-block;
+}
+
+/* set transparent itself */
+.typst-content-group {
+  pointer-events: visible;
+}
+
+.typst-html-semantics span::-moz-selection {
+  color: transparent;
+  background: #7db9de;
+}
+
+.typst-html-semantics span::selection {
+  color: transparent;
+  background: #7db9de;
+}
+
+.typst-html-semantics *::-moz-selection {
+  color: transparent;
+  background: transparent;
+}
+
+.typst-html-semantics *::selection {
+  color: transparent;
+  background: transparent;
+}
+
+.typst-content-fallback {
+  color: transparent;
+  background: transparent;
+}
+
+.pseudo-link,
+.typst-text {
+  pointer-events: none;
+}
+
+.tsel span,
+.tsel {
+  left: 0;
+  position: fixed;
+  text-align: justify;
+  white-space: pre;
+  width: 100%;
+  height: 100%;
+  text-align-last: justify;
+  color: transparent;
+}
+.tsel span::-moz-selection,
+.tsel::-moz-selection {
+  color: transparent;
+  background: #7db9dea0;
+}
+.tsel span::selection,
+.tsel::selection {
+  color: transparent;
+  background: #7db9dea0;
+}
+.pseudo-link {
+  fill: transparent;
+  cursor: pointer;
+  pointer-events: all;
+}
+svg {
+  fill: none;
+}
+
+.outline_glyph path,
+path.outline_glyph {
+  fill: var(--glyph_fill);
+  stroke: var(--glyph_stroke);
+}
+
+.outline_glyph path,
+path.outline_glyph {
+  transition: 0.2s fill stroke;
+}
+.hover .typst-text {
+  --glyph_fill: #66bab7;
+  --glyph_stroke: #66bab7;
+}
+
+.typst-jump-ripple,
+.typst-debug-react-ripple {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+}
+.typst-jump-ripple {
+  border: 1px solid #66bab7;
+}
+.typst-debug-react-ripple {
+  border: 1px solid #cb1b45;
+}
+@keyframes typst-jump-ripple-effect {
+  to {
+    width: 10vw;
+    height: 10vw;
+    opacity: 0.01;
+    margin: -5vw;
+  }
+}
+@keyframes typst-debug-react-ripple-effect {
+  to {
+    width: 3vw;
+    height: 3vw;
+    opacity: 0.01;
+    margin: -1.5vw;
+  }
+}
+</style>
+<script>/// https://segmentfault.com/a/1190000016574288
+(function () {
+  var ie = !!(window.attachEvent && !window.opera);
+  var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && RegExp.$1 < 525;
+  var fn = [];
+  var run = function () {
+    for (var i = 0; i < fn.length; i++) fn[i]();
+  };
+  var d = document;
+  d.ready = function (f) {
+    if (!ie && !wk && d.addEventListener) return d.addEventListener('DOMContentLoaded', f, false);
+    if (fn.push(f) > 1) return;
+    if (ie)
+      (function () {
+        try {
+          d.documentElement.doScroll('left');
+          run();
+        } catch (err) {
+          setTimeout(arguments.callee, 0);
+        }
+      })();
+    else if (wk)
+      var t = setInterval(function () {
+        if (/^(loaded|complete)$/.test(d.readyState)) clearInterval(t), run();
+      }, 0);
+  };
+})();
+</script>
+<script type="module" src="/typst/typst-main.js"></script><script src="/typst/svg-utils.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    <li>
+                                        
+                                            <a href="/">
+                                        
+                                            
+                                                <i class="fa fa-home"></i>
+                                            
+                                            首页
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a href="/archives/">
+                                        
+                                            
+                                                <i class="fa fa-file"></i>
+                                            
+                                            档案馆
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a>
+                                        
+                                            
+                                                <i class="fa fa-link"></i>
+                                            
+                                            链接
+                                        </a>
+                                        
+                                            <ul class="sub-menu">
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://www.luogu.com.cn">
+                                                            
+                                                                <i class="fa fa-link"></i>
+                                                            
+                                                            洛谷
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://codeforces.com">
+                                                            
+                                                                <i class="fa fa-link"></i>
+                                                            
+                                                            CF
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://atcoder.jp">
+                                                            
+                                                                <i class="fa fa-link"></i>
+                                                            
+                                                            AT
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a href="/linklist/">
+                                        
+                                            
+                                                <i class="fa fa-link"></i>
+                                            
+                                            链接列表
+                                        </a>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">ピチャ的后花园</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>ピチャ的后花园</h2> <br />
+                        <span>ピチャの裏庭</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E4%B8%80%E4%BA%9B%E6%A8%A1%E6%9D%BF/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">一些模板</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-10-30T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-10-31</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ピチャ</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~4.79K
+                        
+                        字
+                    </li>
+                
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p><code>temp.cpp</code>:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyNamespace &#123;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">namespace</span> MyIO &#123;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> ll <span class="title">rd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="type">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">		ll s = <span class="number">0</span>, w = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;</span><br><span class="line">			<span class="keyword">if</span> (ch == <span class="string">&#x27;-&#x27;</span>) w = <span class="number">-1</span>;</span><br><span class="line">			ch = <span class="built_in">getchar</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;</span><br><span class="line">			s = (s &lt;&lt; <span class="number">3</span>) + (s &lt;&lt; <span class="number">1</span>) + (ch ^ <span class="number">48</span>);</span><br><span class="line">			ch = <span class="built_in">getchar</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> (s * w);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wr</span><span class="params">(T x)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (x &lt; <span class="number">0</span>) x = -x, <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span> (x &gt; <span class="number">9</span>) <span class="built_in">wr</span>(x / <span class="number">10</span>);</span><br><span class="line">		<span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="number">48</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrsp</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrsp</span><span class="params">(T x, Args... args)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">putchar</span>(<span class="string">&#x27; &#x27;</span>), <span class="built_in">wrsp</span>(args...); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">()</span> </span>&#123; <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">(T x)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">wrln</span>(); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">(T x, Args... args)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">putchar</span>(<span class="string">&#x27; &#x27;</span>), <span class="built_in">wrln</span>(args...); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">namespace</span> Base &#123;</span><br><span class="line">	<span class="meta">#<span class="keyword">define</span> bug(x) &lt;&lt; #x &lt;&lt; <span class="string">&#x27;=&#x27;</span> &lt;&lt; (x) &lt;&lt; <span class="string">&#x27; &#x27;</span></span></span><br><span class="line">	<span class="meta">#<span class="keyword">define</span> siz(A) int((A).size())</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">constexpr</span> <span class="keyword">inline</span> T&amp; <span class="title">Max</span><span class="params">(T &amp;x, <span class="type">const</span> T &amp;y)</span> </span>&#123; <span class="keyword">return</span> x = <span class="built_in">max</span>(x, y); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">constexpr</span> <span class="keyword">inline</span> T&amp; <span class="title">Min</span><span class="params">(T &amp;x, <span class="type">const</span> T &amp;y)</span> </span>&#123; <span class="keyword">return</span> x = <span class="built_in">min</span>(x, y); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">NamespaceMain</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	MyNamespace::<span class="built_in">NamespaceMain</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>mk_temp.cpp</code>:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> MyNamespace &#123;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">namespace</span> MyIO &#123;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> ll <span class="title">rd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="type">char</span> ch = <span class="built_in">getchar</span>();</span><br><span class="line">		ll s = <span class="number">0</span>, w = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (!<span class="built_in">isdigit</span>(ch)) &#123;</span><br><span class="line">			<span class="keyword">if</span> (ch == <span class="string">&#x27;-&#x27;</span>) w = <span class="number">-1</span>;</span><br><span class="line">			ch = <span class="built_in">getchar</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">isdigit</span>(ch)) &#123;</span><br><span class="line">			s = (s &lt;&lt; <span class="number">3</span>) + (s &lt;&lt; <span class="number">1</span>) + (ch ^ <span class="number">48</span>);</span><br><span class="line">			ch = <span class="built_in">getchar</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> (s * w);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wr</span><span class="params">(T x)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (x &lt; <span class="number">0</span>) x = -x, <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span> (x &gt; <span class="number">9</span>) <span class="built_in">wr</span>(x / <span class="number">10</span>);</span><br><span class="line">		<span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="number">48</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrsp</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrsp</span><span class="params">(T x, Args... args)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">putchar</span>(<span class="string">&#x27; &#x27;</span>), <span class="built_in">wrsp</span>(args...); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">()</span> </span>&#123; <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">(T x)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">wrln</span>(); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">inline</span> <span class="type">void</span> <span class="title">wrln</span><span class="params">(T x, Args... args)</span> </span>&#123; <span class="built_in">wr</span>(x), <span class="built_in">putchar</span>(<span class="string">&#x27; &#x27;</span>), <span class="built_in">wrln</span>(args...); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">namespace</span> Base &#123;</span><br><span class="line">	<span class="meta">#<span class="keyword">define</span> bug(x) &lt;&lt; #x &lt;&lt; <span class="string">&#x27;=&#x27;</span> &lt;&lt; (x) &lt;&lt; <span class="string">&#x27; &#x27;</span></span></span><br><span class="line">	<span class="meta">#<span class="keyword">define</span> siz(A) int((A).size())</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">constexpr</span> <span class="keyword">inline</span> T&amp; <span class="title">Max</span><span class="params">(T &amp;x, <span class="type">const</span> T &amp;y)</span> </span>&#123; <span class="keyword">return</span> x = <span class="built_in">max</span>(x, y); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span></span><br><span class="line"><span class="function">	<span class="keyword">constexpr</span> <span class="keyword">inline</span> T&amp; <span class="title">Min</span><span class="params">(T &amp;x, <span class="type">const</span> T &amp;y)</span> </span>&#123; <span class="keyword">return</span> x = <span class="built_in">min</span>(x, y); &#125;</span><br><span class="line"></span><br><span class="line">	<span class="function">mt19937 <span class="title">rnd</span><span class="params">(chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> ll <span class="title">get_rnd</span><span class="params">(ll l, ll r)</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">uniform_int_distribution</span>&lt;ll&gt;(l, r)(rnd); &#125;</span><br><span class="line">	<span class="function"><span class="keyword">inline</span> ll <span class="title">get_rnd_w</span><span class="params">(ll l, ll r, ll t)</span> </span>&#123;</span><br><span class="line">		ll res = <span class="built_in">get_rnd</span>(l, r);</span><br><span class="line">		<span class="keyword">while</span> (t &gt; <span class="number">0</span>) <span class="built_in">Max</span>(res, <span class="built_in">get_rnd</span>(l, r)), --t;</span><br><span class="line">		<span class="keyword">while</span> (t &lt; <span class="number">0</span>) <span class="built_in">Min</span>(res, <span class="built_in">get_rnd</span>(l, r)), ++t;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">NamespaceMain</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	MyNamespace::<span class="built_in">NamespaceMain</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>myfuncs.sh</code>:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fcomp</span></span>() &#123;</span><br><span class="line">	g++ <span class="variable">$1</span>.cpp -o <span class="variable">$1</span> -std=c++14 -O2 -Wall -Wextra -fsanitize=address,leak,undefined -g &amp;&amp; <span class="built_in">echo</span> -e <span class="string">&quot;\e[32mCompiled\e[0m&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">frun</span></span>() &#123;</span><br><span class="line">	fcomp <span class="variable">$1</span> &amp;&amp; <span class="built_in">ulimit</span> -s unlimited &amp;&amp; <span class="keyword">time</span> ./<span class="variable">$1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">ncomp</span></span>() &#123;</span><br><span class="line">	g++ <span class="variable">$1</span>.cpp -o <span class="variable">$1</span> -std=c++14 -O2 -static &amp;&amp; <span class="built_in">echo</span> -e <span class="string">&quot;\e[32mCompiled\e[0m&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">nrun</span></span>() &#123;</span><br><span class="line">	ncomp <span class="variable">$1</span> &amp;&amp; <span class="built_in">ulimit</span> -s unlimited &amp;&amp; <span class="keyword">time</span> ./<span class="variable">$1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fyang</span></span>() &#123;</span><br><span class="line">	<span class="built_in">cp</span> $1<span class="variable">$2</span>.<span class="keyword">in</span> <span class="variable">$1</span>.<span class="keyword">in</span> &amp;&amp; frun $1<span class="variable">$3</span> &amp;&amp; diff -Z $1<span class="variable">$3</span>.out $1<span class="variable">$2</span>.out</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">nyang</span></span>() &#123;</span><br><span class="line">	<span class="built_in">cp</span> $1<span class="variable">$2</span>.<span class="keyword">in</span> <span class="variable">$1</span>.<span class="keyword">in</span> &amp;&amp; nrun $1<span class="variable">$3</span> &amp;&amp; diff -Z $1<span class="variable">$3</span>.out $1<span class="variable">$2</span>.out</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>dui.sh</code>:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/myfuncs.sh</span><br><span class="line">name=</span><br><span class="line">fcomp <span class="variable">$&#123;name&#125;</span></span><br><span class="line">fcomp <span class="variable">$&#123;name&#125;</span>_bf</span><br><span class="line">fcomp <span class="variable">$&#123;name&#125;</span>_mk</span><br><span class="line"><span class="built_in">ulimit</span> -s unlimited</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;1..2000&#125;; <span class="keyword">do</span></span><br><span class="line">	<span class="built_in">echo</span> \#<span class="variable">$i</span></span><br><span class="line">	./<span class="variable">$&#123;name&#125;</span>_mk</span><br><span class="line">	<span class="keyword">if</span> ! ./<span class="variable">$&#123;name&#125;</span>_bf; <span class="keyword">then</span></span><br><span class="line">		<span class="built_in">echo</span> bf re</span><br><span class="line">		<span class="built_in">exit</span> 3</span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">	<span class="keyword">if</span> ! ./<span class="variable">$&#123;name&#125;</span>; <span class="keyword">then</span></span><br><span class="line">		<span class="built_in">echo</span> sol re</span><br><span class="line">		<span class="built_in">exit</span> 2</span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">	<span class="keyword">if</span> ! diff -Z <span class="variable">$&#123;name&#125;</span>.out <span class="variable">$&#123;name&#125;</span>_bf.out; <span class="keyword">then</span></span><br><span class="line">		<span class="built_in">echo</span> wa</span><br><span class="line">		<span class="built_in">exit</span> 1</span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <span itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</span>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-10-31T13:04:17.976Z" itemprop="dateModified">最后编辑：2025-10-31</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Untitled Typst" href="/draft/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/assets/favicon.png" alt="ピチャ" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">ピチャ || picha</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                13
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                6
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                7
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%88%E9%9B%86/">合集</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E8%AE%B0/">游记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AD%96%E7%95%A5/">策略</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E8%AE%B0/">随记</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E5%8D%B7%E9%A2%98/" style="font-size: 0.6em;">卷题</a> <a href="/tags/%E5%90%88%E9%9B%86/" style="font-size: 0.7em;">合集</a> <a href="/tags/%E6%9E%84%E9%80%A0/" style="font-size: 0.6em;">构造</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 0.6em;">游记</a> <a href="/tags/%E7%AD%96%E7%95%A5/" style="font-size: 0.6em;">策略</a> <a href="/tags/%E9%9A%8F%E8%AE%B0/" style="font-size: 0.6em;">随记</a> <a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 0.8em;">题解</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/%E4%B8%80%E4%BA%9B%E6%A8%A1%E6%9D%BF/"><i class="fa fa-book"></i> 一些模板</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/draft/"><i class="fa fa-book"></i> Untitled Typst</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/%E6%9E%84%E9%80%A0%E9%A2%98%E9%80%89%E5%81%9A/"><i class="fa fa-book"></i> 构造题选做</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/linklist/"><i class="fa fa-book"></i> 实用链接</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/hello-world/"><i class="fa fa-book"></i> 欢迎来到ピチャ的博客</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                            <li>
+                                <a href="https://github.com/kratos-rebirth" target="_blank" rel="nofollow">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/atom.xml" target="_blank" rel="nofollow">
+                                    <i class="fa fa-rss"></i>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2025 ピチャ的后花园 版权所有.</li>
+                            <li>本站已在风雨中飘摇<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 <a href="https://github.com/Candinya/Kratos-Rebirth/graphs/contributors" target="_blank">ピチャ</a> 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                            <div>
+                                
+                                    <li>由 <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a> 强力驱动</li>
+                                
+                                    <li>在 <a href="https://github.io" target="_blank">Github Pages</a> 暖心托管</li>
+                                
+                            </div>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享这一刻</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">让朋友们也来瞅瞅！</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+                    <button class="kr-share-platform-button" style="color: #62b6e7;" title="喵窝" onclick="krShareModalOpenPlatform('https://nya.one/share?text=%3E%20$TITLE%0A%3E%0A%3E%20$SUMMARY%0A----%20$SITE%0A%0A$URL')">
+                        <svg fill="currentColor" width="18" height="18" viewBox="0 0 329 388"><path d="M0,36.226c0,-19.993 16.233,-36.226 36.226,-36.226c13.788,0 25.787,7.719 31.908,19.068l188.366,229.845l0,-111.259c-6.356,5.508 -14.645,8.843 -23.707,8.843c-19.994,0 -36.226,-16.232 -36.226,-36.226c-0,-8.551 2.968,-16.413 7.93,-22.613l-0.015,-0.013l56.614,-69.08c6.2,-11.073 18.047,-18.565 31.63,-18.565c19.994,0 36.227,16.233 36.227,36.226l-0,314.644c-0,19.994 -16.233,36.226 -36.227,36.226c-13.166,0 -24.701,-7.039 -31.044,-17.555l-189.229,-230.899l-0,212.228c-0,19.994 -16.233,36.226 -36.227,36.226c-19.993,0 -36.226,-16.232 -36.226,-36.226l0,-314.644Z" /></svg>
+                    </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+
+    </body>
+</html>
