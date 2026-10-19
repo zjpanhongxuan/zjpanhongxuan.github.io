@@ -1,0 +1,33 @@
+name: Temporary Manim CE runtime build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-manim-runtime-temp.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build inside Debian 13
+        shell: bash
+        run: |
+          set -euxo pipefail
+          docker run --rm             -v "$GITHUB_WORKSPACE:/work"             -w /work             debian:trixie-slim             bash /work/.github/scripts/build-manim-runtime-temp.sh
+
+      - name: Upload runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: manim-ce-runtime-linux-x86_64-py313
+          path: |
+            out/manim-ce-runtime-linux-x86_64-py313.tar.zst
+            out/manim-ce-runtime-linux-x86_64-py313.tar.zst.sha256
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
